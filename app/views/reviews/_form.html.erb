@@ -1,0 +1,21 @@
+<%= form_for([@movie,@reviews]) do |f| %>
+  <%= render 'shared/errors', object: @reviews %>
+  <fieldset>
+    <p class="required">
+      <%= f.label :name %><br/>
+      <%= f.text_field :name, autofocus: true, :class => 'form-control' %>
+    </p>
+    <p class="required">
+      <%= f.label :stars %><br/>
+      <%= f.select :stars, Review::STARS, prompt: "Pick one", :class => 'form-control' %>
+    </p>
+    <p class="required">
+      <%= f.label :comment %><br/>
+      <%= f.text_area :comment, cols: 40, rows: 7 , :class => 'form-control', placeholder: "What did you think?" %>
+    </p>
+    <p>
+      <%= f.submit 'Post', :class => 'btn btn-primary'%> 
+      <%= link_to "Cancel", movie_reviews_path, :class => "btn btn-danger" %>
+    </p>
+  </fieldset>
+<% end %>

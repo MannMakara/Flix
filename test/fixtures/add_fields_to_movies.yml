@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cast: MyString
+  director: MyString
+  duration: MyString
+  image_file_name: MyString
+
+two:
+  cast: MyString
+  director: MyString
+  duration: MyString
+  image_file_name: MyString

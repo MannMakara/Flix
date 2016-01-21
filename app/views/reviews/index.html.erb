@@ -1,0 +1,21 @@
+<div class="container">
+	<div class="page-header">
+		<h4>Reviews for <%= link_to(@movie.title, @movie) %></h4>
+	</div>
+	<% if @reviews.size ==0 %>
+		<h3>Don't have any review yet </h3>
+	<% else %>
+		<ul id="reviews">
+	  <% @reviews.each do |review| %>
+	    <li>
+	      <span class="review"><%= pluralize(review.stars, 'star') %></span>
+	      <span class="user">by <%= review.name %></span>
+	      <span class="date"><%= time_ago_in_words(review.created_at) %> ago</span>
+	      <p>
+	        &quot;<%= review.comment %>&quot;
+	      </p>
+	    </li>
+	  <% end %>
+	</ul>
+	<% end -%>
+</div>

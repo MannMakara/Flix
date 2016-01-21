@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="row">
+		<% @movie.each do |var| %>
+			<div class="col-md-4">
+				<%= image_for(var) %>
+				<h3><%= link_to(var.title, var) %></h3>
+				<p>Description : <%= truncate(var.description,length: 40,seperator:' ') %></p>
+				<p>Rating: (<%= format_unrated(var) %>)</p>
+				<p>Total Gross: <%=format_total_gross(var) %></p>
+				<p>Release Date :<%= var.released_on %> (<%= time_ago_in_words(var.released_on) %>)</p>
+			</div>
+		<% end %>
+	</div>
+
+</div>

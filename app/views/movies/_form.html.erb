@@ -1,0 +1,50 @@
+<%= form_for(@movie) do |f| %>
+  <%= render 'shared/errors', object: @movie %>
+  <fieldset>
+    <p class="required">
+      <%= f.label :title %><br/>
+      <%= f.text_field :title, autofocus: true, :class => 'form-control' %>
+    </p>
+    <p class="required">
+      <%= f.label :description %><br/>
+      <%= f.text_area :description, cols: 40, rows: 7 , :class => 'form-control' %>
+    </p>
+    <p class="required">
+      <%= f.label :rating %><br/>
+      <%= f.select :rating, Movie::RATINGS, prompt: "Pick one", :class => 'form-control' %>
+    </p>
+    <p class="required">
+      <%= f.label :released_on %><br/>
+      <%= f.date_select :released_on, :class => 'form-control' %>
+      <!-- We can also use date_field -->
+    </p>
+    <p class="required">
+      <%= f.label :cast %><br/>
+      <%= f.text_area :cast, cols: 40, rows: 7, :class => 'form-control' %>
+      <!-- We can also use date_field -->
+    </p>
+    <p class="required">
+      <%= f.label :director %><br/>
+      <%= f.text_field :director , :class => 'form-control' %>
+      <!-- We can also use date_field -->
+    </p>
+    <p class="required">
+      <%= f.label :duration %><br/>
+      <%= f.text_field :duration , :class => 'form-control' %>
+      <!-- We can also use date_field -->
+    </p>
+    <p class="required">
+      <%= f.label :total_gross %><br/>
+      <%= f.number_field :total_gross , :class => 'form-control' %>
+    </p>
+    <p class="required">
+      <%= f.label :image_file_name %><br/>
+      <%= f.file_field :image_file_name , :class => 'form-control' %>
+      <!-- We can also use date_field -->
+    </p>
+    <p>
+      <%= f.submit :class => 'btn btn-primary'%> 
+      <%= link_to "Cancel", movies_path, :class => "btn btn-danger" %>
+    </p>
+  </fieldset>
+<% end %>

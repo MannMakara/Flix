@@ -1,0 +1,13 @@
+<li>
+	<%= image_for(@movie) %>
+	<h1><%= @movie.title %></h1> 
+	<p>Description : <%= truncate(@movie.description,length: 40,seperator:' ') %></p>
+	<p>Rating: (<%= format_unrated(@movie) %>)</p>
+	<p>Average Review: (<%= format_average_stars(@movie) %>)</p>
+	<p>Total Gross: <%=format_total_gross(@movie) %></p>
+	<p>Release Date :<%= @movie.released_on %> (<%= time_ago_in_words(@movie.released_on) %>)</p>
+</li>
+<!-- method: :delete is to overide the verb that request to HTTP -->
+<!-- data: {confirm: "meassage"} is respone to open dialog to confirm to user to to the action or not -->
+<%= link_to "Make review", new_movie_review_path(@movie), :class => "btn btn-success" %>
+<%= link_to "Edit", edit_movie_path, :class => "btn btn-primary" %>  <%= link_to "Delete", movie_path, method: :delete, data: {confirm: "Are you sure you want to delete #{@movie.title} Movie"}, :class => "btn btn-info" %> <%= link_to "Who's rating on this movie?", movie_reviews_path(@movie), :class => "btn btn-primary" %> 

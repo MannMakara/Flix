@@ -1,0 +1,178 @@
+// Place all the styles related to the movies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "color";
+.img-rounded{
+	height: 50%;
+	width: 50%;	
+}
+.footer{
+	text-align: center; 
+	padding: 5px; 
+	color: green; 
+	background: #F0F0F0;
+}
+
+/* ERRORS */
+
+section#errors {
+  margin: 1em 0;
+  padding: 1em;
+  background: $errors-background-color;
+
+  h4 {
+    color: $errors-text-color;
+    font-size: 1.25em;
+  }
+
+  h5 {
+    font-size: 1em;
+    margin: .5em 0;
+    font-weight: bold;
+  }
+}
+
+/* FORMS */
+
+fieldset {
+  margin: 0 0 10px 0;
+  padding: 10px 20px;
+  background-color: $fieldset-color;
+  border: 0;
+  box-shadow: #aaa 0 0 8px;
+
+  label {
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: .25em;
+  }
+
+
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 0 20px 0;
+      padding: 0;
+
+      &.required label {
+        font-weight: bold;
+      }
+    }
+  }
+
+  input,
+  label {
+    display: block;
+  }
+
+  input,
+  textarea {
+    font-size:     16px;
+    padding:       10px;
+    border-radius: 6px;
+    box-shadow:    0px;
+    border: 1px solid $subdued-color;
+  }
+  
+  div.field_with_errors {
+    display: inline;
+    label {
+      color: $errors-text-color;
+    }
+    input, textarea, select {
+      background: $errors-background-color;
+    }
+  }
+
+  p {
+    input {
+      display: inline-block;
+    }
+    a.button {
+      padding: 10px 15px;
+    }
+  }
+}
+
+
+// Footer CSS 
+
+.footer-distributed{
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+
+  padding: 45px 50px;
+  margin-top: 80px;
+}
+
+.footer-distributed .footer-left p{
+  color:  #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Footer links */
+
+.footer-distributed p.footer-links{
+  font-size:18px;
+  font-weight: bold;
+  color:  #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.footer-distributed p.footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-right{
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-left: 3px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 600px) {
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-right{
+    text-align: center;
+  }
+
+  .footer-distributed .footer-right{
+    float: none;
+    margin: 0 auto 20px;
+  }
+
+  .footer-distributed .footer-left p.footer-links{
+    line-height: 1.8;
+  }
+}
