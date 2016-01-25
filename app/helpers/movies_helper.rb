@@ -20,7 +20,7 @@ module MoviesHelper
 		if movie.image_file_name.blank?
 			image_tag('placeholder.jpg', class: "img-rounded")
 		else
-			image_tag(movie.image_file_name)
+			image_tag(movie.image.url(:thumb))
 		end
 	end
 

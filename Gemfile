@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby "2.2.1"
 gem 'rails_12factor'
 gem 'pg'
+gem "paperclip", "~> 4.3"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use BootStrap for CSS

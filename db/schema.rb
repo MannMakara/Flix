@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160114033737) do
+ActiveRecord::Schema.define(version: 20160122085155) do
 
   create_table "add_fields_to_movies", force: :cascade do |t|
     t.string   "cast"
@@ -26,14 +26,17 @@ ActiveRecord::Schema.define(version: 20160114033737) do
     t.string   "title"
     t.string   "rating"
     t.decimal  "total_gross"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.text     "description"
     t.date     "released_on"
     t.string   "cast"
     t.string   "director"
     t.string   "duration"
     t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "reviews", force: :cascade do |t|
